@@ -14,13 +14,6 @@ const modules = {
 };
 
 /* SIDEBAR CLICK HANDLER */
-document.querySelectorAll(".sidebar-item").forEach(item => {
-  // Inline module buttons
-document.querySelectorAll(".module-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    currentModule = btn.dataset.module;
-  });
-});
 
   item.addEventListener("click", () => {
     document.querySelectorAll(".sidebar-item").forEach(i => i.classList.remove("active"));
