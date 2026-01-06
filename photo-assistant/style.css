@@ -1,4 +1,4 @@
-/* Tło sekcji asystenta – trochę jaśniejsze niż hero na stronie głównej */
+/* TŁO SEKCJI */
 .assistant-main {
     background: var(--black);
     color: white;
@@ -13,20 +13,20 @@
     padding: 80px 20px;
 }
 
-/* MODAL */
-
+/* MODAL — TŁO */
 .assistant-modal {
-    display: none; /* domyślnie ukryty */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* MODAL — OKNO */
 .assistant-modal-content {
     background-color: var(--white);
     color: var(--black);
@@ -34,9 +34,11 @@
     padding: 30px 30px 40px;
     border-radius: 8px;
     max-width: 1100px;
+    width: 90%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+/* PRZYCISK ZAMYKANIA */
 .assistant-close {
     float: right;
     font-size: 28px;
@@ -48,6 +50,7 @@
     color: var(--gray-dark);
 }
 
+/* WSTĘP */
 .assistant-welcome {
     margin-top: 4px;
     margin-bottom: 24px;
@@ -55,6 +58,7 @@
     color: var(--gray-dark);
 }
 
+/* KOLUMNY */
 .assistant-columns {
     display: flex;
     flex-wrap: wrap;
@@ -62,8 +66,7 @@
 }
 
 .assistant-column {
-    flex: 1 1 250px;
-    min-width: 0;
+    flex: 1 1 300px;
 }
 
 .assistant-column h3 {
@@ -79,7 +82,7 @@
     line-height: 1.5;
 }
 
-/* Responsywność */
+/* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
     .assistant-modal-content {
         margin: 20px;
