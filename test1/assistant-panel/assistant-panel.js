@@ -1,6 +1,8 @@
+let lang = localStorage.getItem("lang") || "en";
 const output = document.getElementById("assistantOutput");
 const input = document.getElementById("assistantInput");
 const sendBtn = document.getElementById("assistantSend");
+sendBtn.addEventListener("click", sendMessage);
 
 let currentModule = "planner";
 
@@ -47,4 +49,16 @@ sendBtn.addEventListener("click", sendMessage);
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") sendMessage();
 });
+// Apply translations to UI
+document.querySelector(".assistant-welcome h2").innerText = t[lang].welcome_title;
+document.querySelector(".assistant-welcome p").innerText = t[lang].welcome_sub;
+document.getElementById("assistantInput").placeholder = t[lang].placeholder;
+document.getElementById("assistantSend").innerText = t[lang].send;
+
+// Translate inline module buttons
+document.querySelector('[data-module="planner"]').innerText = t[lang].modules.planner;
+document.querySelector('[data-module="gear"]').innerText = t[lang].modules.gear;
+document.querySelector('[data-module="lighting"]').innerText = t[lang].modules.lighting;
+document.querySelector('[data-module="composition"]').innerText = t[lang].modules.composition;
+document.querySelector('[data-module="creative"]').innerText = t[lang].modules.creative;
 
