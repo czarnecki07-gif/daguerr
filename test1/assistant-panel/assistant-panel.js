@@ -101,7 +101,6 @@ document.querySelectorAll(".module-btn").forEach((btn) => {
     // dodaj active do klikniętego
     btn.classList.add("active");
   });
-});
 
 // ========== USTAW DOMYŚLNIE AKTYWNY MODUŁ ==========
 
