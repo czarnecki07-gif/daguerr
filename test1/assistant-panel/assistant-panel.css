@@ -388,3 +388,24 @@ body.why-page {
   background: #000 !important;
   background-color: #000 !important;
 }
+
+/* --- WHY LINK: FORCE OVERRIDE --- */
+
+.why-link-wrapper {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 30px 0 40px 0 !important;
+  display: block !important;
+}
+
+.why-link,
+.why-link:visited,
+.why-link:active,
+.why-link:hover {
+  color: #3b82f6 !important;        /* jasny niebieski */
+  font-size: 26px !important;       /* duży tekst */
+  font-weight: 800 !important;      /* mocny, czytelny */
+  text-decoration: none !important; /* bez podkreślenia */
+  letter-spacing: 0.5px !important;
+  display: inline-block !important;
+}
