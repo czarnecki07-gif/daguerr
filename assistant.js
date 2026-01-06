@@ -17,23 +17,21 @@ function renderAssistant(lang) {
     const safeLang = assistantData.role[lang] ? lang : "en";
 
     document.getElementById("assistantRole").textContent =
-        assistantData.role[safeLang] || assistantData.role["en"];
+        assistantData.role[safeLang];
 
     document.getElementById("assistantWelcome").textContent =
-        assistantData.welcome[safeLang] || assistantData.welcome["en"];
+        assistantData.welcome[safeLang];
 
     fillList("assistantInstructions", assistantData.instructions[safeLang], assistantData.instructions["en"]);
     fillList("assistantFeatures", assistantData.features[safeLang], assistantData.features["en"]);
     fillList("assistantExamples", assistantData.examples[safeLang], assistantData.examples["en"]);
 }
 
-function fillList(elementId, primaryArray, fallbackArray) {
-    const ul = document.getElementById(elementId);
+function fillList(id, primary, fallback) {
+    const ul = document.getElementById(id);
     ul.innerHTML = "";
 
-    const items = (primaryArray && primaryArray.length > 0)
-        ? primaryArray
-        : fallbackArray;
+    const items = primary.length > 0 ? primary : fallback;
 
     items.forEach(item => {
         const li = document.createElement("li");
@@ -78,4 +76,3 @@ document.addEventListener("DOMContentLoaded", () => {
     setupLanguageSync();
     loadAssistantData();
 });
-
