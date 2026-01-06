@@ -1,36 +1,57 @@
-/* LOAD LANGUAGE */
-let lang = localStorage.getItem("lang") || "en";
+// ========== PODSTAWOWA KONFIGURACJA ==========
 
-/* ELEMENTS */
+// Aktualny moduł (domyślnie planner)
+let currentModule = "planner";
+
+// Pobieramy elementy z DOM
 const output = document.getElementById("assistantOutput");
 const input = document.getElementById("assistantInput");
 const sendBtn = document.getElementById("assistantSend");
 
-/* CURRENT MODULE */
-let currentModule = "planner";
+// Prosta ochrona: jeśli któregoś elementu brakuje, przerwij
+if (!output || !input || !sendBtn) {
+  console.error("Brakuje elementów assistantOutput / assistantInput / assistantSend w HTML.");
+}
 
-/* MODULE ROUTER */
+// ========== MODUŁY ==========
+
 const modules = {
-  planner: (text) => `📸 <b>${t[lang].modules.planner}</b><br><br>${text}`,
-  gear: (text) => `🔧 <b>${t[lang].modules.gear}</b><br><br>${text}`,
-  lighting: (text) => `💡 <b>${t[lang].modules.lighting}</b><br><br>${text}`,
-  composition: (text) => `📐 <b>${t[lang].modules.composition}</b><br><br>${text}`,
-  creative: (text) => `🎨 <b>${t[lang].modules.creative}</b><br><br>${text}`
+  planner: (text) =>
+    `📸 <b>Photo Planner</b><br><br>You asked: "${text}"<br><br>I’ll help you plan your shot step by step.`,
+  gear: (text) =>
+    `🔧 <b>Gear Advisor</b><br><br>You asked: "${text}"<br><br>We’ll choose the best lenses, bodies and accessories.`,
+  lighting: (text) =>
+    `💡 <b>Lighting Assistant</b><br><br>You asked: "${text}"<br><br>Let’s design a lighting setup for your scene.`,
+  composition: (text) =>
+    `📐 <b>Composition Coach</b><br><br>You asked: "${text}"<br><br>We’ll refine framing, balance and visual flow.`,
+  creative: (text) =>
+    `🎨 <b>Creative Generator</b><br><br>You asked: "${text}"<br><br>Let’s generate ideas, concepts and variations.`
 };
 
-/* SEND MESSAGE */
+// ========== WYSYŁANIE WIADOMOŚCI ==========
+
 function sendMessage() {
+  if (!input || !output) return;
+
   const text = input.value.trim();
   if (!text) return;
 
+  // Dodaj wiadomość użytkownika
   addUserMessage(text);
+
+  // Czyścimy input
   input.value = "";
 
-  const response = modules[currentModule](text);
+  // Generujemy odpowiedź z aktualnego modułu
+  const moduleFn = modules[currentModule] || modules["planner"];
+  const response = moduleFn(text);
+
+  // Dodajemy wiadomość asystenta
   addAssistantMessage(response);
 }
 
-/* ADD USER MESSAGE */
+// ========== RENDEROWANIE WIADOMOŚCI ==========
+
 function addUserMessage(text) {
   const div = document.createElement("div");
   div.className = "msg user-msg";
@@ -39,7 +60,6 @@ function addUserMessage(text) {
   output.scrollTop = output.scrollHeight;
 }
 
-/* ADD ASSISTANT MESSAGE */
 function addAssistantMessage(text) {
   const div = document.createElement("div");
   div.className = "msg assistant-msg";
@@ -48,29 +68,37 @@ function addAssistantMessage(text) {
   output.scrollTop = output.scrollHeight;
 }
 
-/* CLICK SEND */
-sendBtn.addEventListener("click", sendMessage);
+// ========== ZDARZENIA (CLICK + ENTER) ==========
 
-/* ENTER KEY */
-input.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") sendMessage();
-});
+if (sendBtn) {
+  sendBtn.addEventListener("click", sendMessage);
+}
 
-/* INLINE MODULE BUTTONS */
-document.querySelectorAll(".module-btn").forEach(btn => {
+if (input) {
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+}
+
+// ========== WYBÓR MODUŁU (NOWE PRZYCISKI W JEDNEJ LINII) ==========
+
+document.querySelectorAll(".module-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
-    currentModule = btn.dataset.module;
+    const mod = btn.dataset.module;
+    if (!mod || !modules[mod]) return;
+    currentModule = mod;
+
+    // (opcjonalnie) podświetl aktywny moduł
+    document.querySelectorAll(".module-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
   });
 });
 
-/* APPLY TRANSLATIONS */
-document.querySelector(".assistant-welcome h2").innerText = t[lang].welcome_title;
-document.querySelector(".assistant-welcome p").innerText = t[lang].welcome_sub;
-input.placeholder = t[lang].placeholder;
-sendBtn.innerText = t[lang].send;
-
-document.querySelector('[data-module="planner"]').innerText = t[lang].modules.planner;
-document.querySelector('[data-module="gear"]').innerText = t[lang].modules.gear;
-document.querySelector('[data-module="lighting"]').innerText = t[lang].modules.lighting;
-document.querySelector('[data-module="composition"]').innerText = t[lang].modules.composition;
-document.querySelector('[data-module="creative"]').innerText = t[lang].modules.creative;
+// Ustaw domyślnie aktywny moduł (planner), jeśli jest przycisk
+const defaultBtn = document.querySelector('.module-btn[data-module="planner"]');
+if (defaultBtn) {
+  defaultBtn.classList.add("active");
+}
