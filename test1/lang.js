@@ -14,7 +14,7 @@ const translations = {
         menu_gear: "Wyszukiwarka Sprzętu",
         menu_world: "Świat Fotografii",
         menu_encyclopedia: "Encyklopedia",
-        hero_title: "Daguerr Photo Assistant",
+        hero_title: "Asystent Fotografa Daguerr",
         hero_subtitle: "Twój inteligentny pomocnik fotograficzny — planowanie, nauka, kreatywność i workflow.",
         hero_button: "Otwórz Asystenta"
     }
