@@ -1,4 +1,4 @@
-/* GLOBAL RESET */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -15,29 +15,39 @@ body {
 /* HEADER */
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 20px 40px;
+    padding: 25px 40px;
     background: #111;
     border-bottom: 1px solid #222;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+/* NAV + LANGUAGE ROW */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
 }
 
 /* NAVIGATION */
 .main-nav {
     display: flex;
-    gap: 24px;
+    gap: 28px;
 }
 
 .main-nav a {
-    color: #ddd;
+    color: #ccc;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
     transition: color .2s ease;
 }
 
@@ -54,15 +64,15 @@ body {
     border-radius: 4px;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     text-align: center;
-    padding: 120px 20px;
+    padding: 140px 20px;
     background: linear-gradient(to bottom, #000, #111);
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 52px;
     margin-bottom: 20px;
 }
 
@@ -75,12 +85,12 @@ body {
 
 /* CTA BUTTON */
 .cta-button {
-    padding: 14px 32px;
+    padding: 16px 36px;
     background: #2563eb;
     color: #fff;
     border: none;
     border-radius: 6px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     transition: background .25s ease;
 }
@@ -96,4 +106,25 @@ body {
     background: #111;
     color: #666;
     margin-top: 80px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
 }
