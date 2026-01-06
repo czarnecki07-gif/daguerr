@@ -49,7 +49,6 @@ input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") sendMessage();
 });
 
-
 /* SIDEBAR CLICK HANDLER */
 
   item.addEventListener("click", () => {
