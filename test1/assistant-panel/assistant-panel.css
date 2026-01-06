@@ -191,10 +191,9 @@ body {
   transition: 0.2s;
 }
 
-
 .module-btn:hover {
-  background: #1f1f1f;
-  border-color: #3b82f6;
+  background: #e5e5e5;
+  border-color: #999;
 }
 
 /* INPUT */
@@ -244,4 +243,10 @@ body {
   background-color: #dbeafe !important;
   color: #1e3a8a !important;
   border-color: #007bff !important;
+}
+
+.module-btn.active:hover {
+  background: #f0f0f0;      /* to samo co normalny */
+  color: #1e3a8a;
+  border-color: #1e3a8a;
 }
