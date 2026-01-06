@@ -11,15 +11,13 @@ const translations = {
 
     pl: {
         menu_assistant: "Asystent Fotografa",
-        menu_gear: "Gear Finder",
+        menu_gear: "Wyszukiwarka Sprzętu",
         menu_world: "Świat Fotografii",
         menu_encyclopedia: "Encyklopedia",
         hero_title: "Daguerr Photo Assistant",
         hero_subtitle: "Twój inteligentny pomocnik fotograficzny — planowanie, nauka, kreatywność i workflow.",
         hero_button: "Otwórz Asystenta"
-    },
-
-    de: {}, fr: {}, es: {}, it: {}, pt: {}, nl: {}, cz: {}, ua: {}, zh: {}, ja: {}
+    }
 };
 
 document.getElementById("languageSelect").addEventListener("change", function () {
