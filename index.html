@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAGUERR — Photography Intelligence</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DAGUERR — Photography Intelligence</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assistant.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assistant.css" />
 
-    <script src="lang.js" defer></script>
-    <script src="assistant.js" defer></script>
+  <script src="lang.js" defer></script>
+  <script src="assistant.js" defer></script>
 </head>
 
 <body>
+  <header class="header">
+    <div class="logo">DAGUERR</div>
 
-    <header class="header">
-        <div class="logo">DAGUERR</div>
+    <nav class="main-nav">
+      <a href="#" data-key="menu_assistant">Photo Assistant</a>
+      <a href="#" data-key="menu_gear">Gear Finder</a>
+      <a href="#" data-key="menu_world">Photo World</a>
+      <a href="#" data-key="menu_encyclopedia">Encyclopedia</a>
+    </nav>
 
-        <nav class="main-nav">
-            <a href="#" data-key="menu_assistant">Photo Assistant</a>
-            <a href="#" data-key="menu_gear">Gear Finder</a>
-            <a href="#" data-key="menu_world">Photo World</a>
-            <a href="#" data-key="menu_encyclopedia">Encyclopedia</a>
-        </nav>
-
-        <div class="lang-switcher">
-            <select id="languageSelect">
-                <option value="en">EN</option>
-                <option value="pl">PL</option>
-            </select>
-        </div>
-    </header>
-
-    <section class="hero">
-        <h1 data-key="hero_title">Daguerr Photo Assistant</h1>
-        <p data-key="hero_subtitle">
-            Your intelligent companion for photography — planning, learning, creativity, and workflow.
-        </p>
-
-        <button id="openAssistantBtn" class="cta-button" data-key="hero_button">
-            Open Assistant
-        </button>
-    </section>
-
-    <!-- MODAL -->
-    <div id="assistantModal" class="assistant-modal">
-        <div class="assistant-modal-content">
-
-            <span id="closeAssistantBtn" class="assistant-close">&times;</span>
-
-            <h2 id="assistantRole"></h2>
-            <p id="assistantWelcome" class="assistant-welcome"></p>
-
-            <div class="assistant-columns">
-                <div class="assistant-column">
-                    <h3>Instructions</h3>
-                    <ul id="assistantInstructions"></ul>
-                </div>
-
-                <div class="assistant-column">
-                    <h3>Features</h3>
-                    <ul id="assistantFeatures"></ul>
-                </div>
-
-                <div class="assistant-column">
-                    <h3>Examples</h3>
-                    <ul id="assistantExamples"></ul>
-                </div>
-            </div>
-
-        </div>
+    <div class="lang-switcher">
+      <select id="languageSelect">
+        <option value="en">EN</option>
+        <option value="pl">PL</option>
+        <option value="de">DE</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+        <option value="it">IT</option>
+        <option value="pt">PT</option>
+        <option value="nl">NL</option>
+        <option value="cz">CZ</option>
+        <option value="ua">UA</option>
+        <option value="zh">ZH</option>
+        <option value="ja">JA</option>
+      </select>
     </div>
+  </header>
 
-    <footer class="footer">
-        <p>© 2026 DAGUERR</p>
-    </footer>
+  <section class="hero">
+    <h1 data-key="hero_title">Daguerr Photo Assistant</h1>
+    <p data-key="hero_subtitle">
+      Your intelligent companion for photography — planning, learning, creativity, and workflow.
+    </p>
 
+    <button id="openAssistantBtn" class="cta-button" data-key="hero_button">
+      Open Assistant
+    </button>
+  </section>
+
+  <div id="assistantModal" class="assistant-modal">
+    <div class="assistant-modal-content">
+      <span id="closeAssistantBtn" class="assistant-close">&times;</span>
+
+      <h2 id="assistantRole"></h2>
+      <p id="assistantWelcome" class="assistant-welcome"></p>
+
+      <div class="assistant-columns">
+        <div class="assistant-column">
+          <h3>Instructions</h3>
+          <ul id="assistantInstructions"></ul>
+        </div>
+
+        <div class="assistant-column">
+          <h3>Features</h3>
+          <ul id="assistantFeatures"></ul>
+        </div>
+
+        <div class="assistant-column">
+          <h3>Examples</h3>
+          <ul id="assistantExamples"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 DAGUERR</p>
+  </footer>
 </body>
 </html>
