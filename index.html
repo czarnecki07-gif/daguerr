@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DAGUERR — Photography & Visual Arts</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      color: #1a1a1a;
-    }
-    header {
-      padding: 120px 20px 80px 20px;
-    }
-    h1 {
-      font-size: 3.2rem;
-      margin-bottom: 25px;
-      font-weight: 700;
-    }
-    p {
-      font-size: 1.3rem;
-      max-width: 720px;
-      margin: 0 auto 40px auto;
-      line-height: 1.7;
-      color: #444;
-    }
-    .coming {
-      font-size: 1.2rem;
-      color: #666;
-      margin-top: 20px;
-      font-weight: 600;
-    }
-    footer {
-      margin-top: 120px;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAGUERR — Photography Intelligence</title>
+    <link rel="stylesheet" href="shared/style.css">
+    <script src="shared/lang.js" defer></script>
 </head>
+
 <body>
 
-<header>
-  <h1>DAGUERR</h1>
-  <p>
-    A future platform dedicated to photography, visual arts, and creative expression — built with clarity and focus.
-  </p>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">DAGUERR</div>
 
-  <p class="coming">Coming Soon</p>
-</header>
+        <nav class="main-nav">
+            <a href="photo-assistant/index.html" data-key="menu_assistant">Photo Assistant</a>
+            <a href="gear-finder/index.html" data-key="menu_gear">Gear Finder</a>
+            <a href="photo-world/index.html" data-key="menu_world">Photo World</a>
+            <a href="encyclopedia/index.html" data-key="menu_encyclopedia">Encyclopedia</a>
+        </nav>
 
-<footer>
-  © 2026 DAGUERR — part of the Allfabet Group
-</footer>
+        <div class="lang-switcher">
+            <select id="languageSelect">
+                <option value="en">EN</option>
+                <option value="pl">PL</option>
+                <option value="de">DE</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="pt">PT</option>
+                <option value="nl">NL</option>
+                <option value="cz">CZ</option>
+                <option value="ua">UA</option>
+                <option value="zh">ZH</option>
+                <option value="ja">JA</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1 data-key="hero_title">Daguerr Photo Assistant</h1>
+        <p data-key="hero_subtitle">
+            Your intelligent companion for photography — planning, learning, creativity, and workflow.
+        </p>
+
+        <a href="photo-assistant/index.html" class="cta-button" data-key="hero_button">
+            Open Assistant
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 DAGUERR</p>
+    </footer>
 
 </body>
 </html>
