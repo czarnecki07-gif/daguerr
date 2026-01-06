@@ -28,6 +28,21 @@ body {
   font-weight: 900;
   letter-spacing: 4px;
 }
+/* BACK BUTTON */
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: #3b82f6;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.8;
+  transition: opacity .2s ease;
+}
+
+.back-button:hover {
+  opacity: 1;
+}
 
 /* BACK BUTTON */
 .back-button {
