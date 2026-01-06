@@ -1,5 +1,3 @@
-body { background: red !important; }
-
 /* GLOBAL */
 * {
   margin: 0;
@@ -21,28 +19,13 @@ body {
   padding: 20px 40px;
   border-bottom: 1px solid #1f1f1f;
   text-align: center;
-  position: relative; /* ← DODAJ TO */
+  position: relative;
 }
 
 .panel-logo {
   font-size: 42px;
   font-weight: 900;
   letter-spacing: 4px;
-}
-/* BACK BUTTON */
-.back-button {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  color: #3b82f6;
-  cursor: pointer;
-  font-size: 16px;
-  opacity: 0.8;
-  transition: opacity .2s ease;
-}
-
-.back-button:hover {
-  opacity: 1;
 }
 
 /* BACK BUTTON */
@@ -69,8 +52,6 @@ body {
   overflow: hidden;
 }
 
-/* SIDEBAR */
-
 /* MAIN PANEL */
 .assistant-main {
   flex: 1;
@@ -88,8 +69,14 @@ body {
   overflow-y: auto;
   height: 100%;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 900px;
+  background: #0f0f0f;
+  border-radius: 8px;
+  border: 1px solid #1f1f1f;
 }
 
+/* WELCOME */
 .assistant-welcome {
   margin-top: 40px;
   text-align: center;
@@ -108,6 +95,8 @@ body {
   background: #111;
   border-top: 1px solid #1f1f1f;
   gap: 12px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .assistant-input-area input {
@@ -167,12 +156,6 @@ body {
   overflow: hidden;
 }
 
-/* WELCOME */
-.assistant-welcome {
-  text-align: center;
-  color: #ccc;
-}
-
 /* INLINE MODULES */
 .assistant-modules-inline {
   display: flex;
@@ -196,81 +179,45 @@ body {
   border-color: #999;
 }
 
-/* INPUT */
-.assistant-input-area {
-  display: flex;
-  gap: 12px;
-  width: 100%;
-  max-width: 700px;
-}
-
-.assistant-input-area input {
-  flex: 1;
-  padding: 14px 16px;
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 8px;
-  color: #fff;
-}
-
-.assistant-input-area button {
-  padding: 14px 28px;
-  background: #3b82f6;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* OUTPUT */
-.assistant-output {
-  width: 100%;
-  max-width: 900px;
-  height: 100%;
-  overflow-y: auto;
-  padding: 20px;
-  background: #0f0f0f;
-  border-radius: 8px;
-  border: 1px solid #1f1f1f;
-}
-
 .module-btn.active {
-  color: #3b82f6 !important;   /* jasnoniebieski tekst */
+  color: #3b82f6 !important;
   font-weight: 700;
   border-color: #3b82f6 !important;
 }
 
 .module-btn.active:hover {
-  background-color: #dbeafe !important;
-  color: #1e3a8a !important;
-  border-color: #007bff !important;
-}
-
-.module-btn.active:hover {
-  background: #f0f0f0;      /* to samo co normalny */
+  background: #f0f0f0;
   color: #1e3a8a;
   border-color: #1e3a8a;
 }
+
+/* WHY LINK (HOME PAGE) */
 .why-link-wrapper {
   width: 100%;
   text-align: center;
-  margin: 20px 0 40px 0;
+  margin: 30px 0 40px 0;
   display: block;
 }
 
-.why-link {
-  color: #3b82f6;
-  font-size: 18px;
-  text-decoration: none;
-  font-weight: 600;
+.why-link,
+.why-link:visited,
+.why-link:active,
+.why-link:hover {
+  color: #3b82f6 !important;
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  letter-spacing: 0.5px !important;
+  display: inline-block !important;
 }
 
 .why-link:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
-.why-page {
-  background: #0a0a0a;
+/* WHY PAGE */
+body.why-page {
+  background: #000 !important;
   color: #ddd;
   font-family: Arial, sans-serif;
   padding: 40px 20px;
@@ -333,79 +280,4 @@ body {
 
 .back-home a:hover {
   text-decoration: underline;
-}
-
-.why-link,
-.why-link:visited {
-  color: #3b82f6 !important;   /* jasny niebieski */
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.why-link:hover {
-  text-decoration: underline;
-}
-
-.why-link,
-.why-link:visited,
-.why-link:active {
-  color: #3b82f6 !important;   /* jasny niebieski */
-  text-decoration: none !important;
-}
-
-.why-page {
-  background: #000 !important;
-  color: #ddd;
-  font-family: Arial, sans-serif;
-  padding: 40px 20px;
-}
-
-/* --- WHY LINK FIX --- */
-
-.why-link-wrapper {
-  width: 100%;
-  text-align: center;
-  margin: 30px 0 40px 0;
-  display: block;
-}
-
-.why-link,
-.why-link:visited,
-.why-link:active {
-  color: #3b82f6 !important;     /* jasny niebieski */
-  font-size: 24px !important;    /* większy tekst */
-  font-weight: 700 !important;   /* pogrubiony */
-  text-decoration: none !important; /* bez podkreślenia */
-  letter-spacing: 0.5px;
-}
-
-.why-link:hover {
-  opacity: 0.8;
-}
-
-
-body.why-page {
-  background: #000 !important;
-  background-color: #000 !important;
-}
-
-/* --- WHY LINK: FORCE OVERRIDE --- */
-
-.why-link-wrapper {
-  width: 100% !important;
-  text-align: center !important;
-  margin: 30px 0 40px 0 !important;
-  display: block !important;
-}
-
-.why-link,
-.why-link:visited,
-.why-link:active,
-.why-link:hover {
-  color: #3b82f6 !important;        /* jasny niebieski */
-  font-size: 26px !important;       /* duży tekst */
-  font-weight: 800 !important;      /* mocny, czytelny */
-  text-decoration: none !important; /* bez podkreślenia */
-  letter-spacing: 0.5px !important;
-  display: inline-block !important;
 }
