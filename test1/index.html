@@ -5,32 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DAGUERR — Photography Intelligence</title>
 
+  <!-- MAIN STYLES -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="assistant.css" />
 
+  <!-- SCRIPTS -->
   <script src="lang.js" defer></script>
   <script src="assistant.js" defer></script>
 </head>
 
 <body>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="logo">DAGUERR</div>
 
-    <nav class="main-nav">
-      <a href="#" data-key="menu_assistant">Photo Assistant</a>
-      <a href="#" data-key="menu_gear">Gear Finder</a>
-      <a href="#" data-key="menu_world">Photo World</a>
-      <a href="#" data-key="menu_encyclopedia">Encyclopedia</a>
-    </nav>
+    <div class="header-row">
+      <nav class="main-nav">
+        <a href="#" data-key="menu_assistant">Photo Assistant</a>
+        <a href="#" data-key="menu_gear">Gear Finder</a>
+        <a href="#" data-key="menu_world">Photo World</a>
+        <a href="#" data-key="menu_encyclopedia">Encyclopedia</a>
+      </nav>
 
-    <div class="lang-switcher">
-      <select id="languageSelect">
-        <option value="en">EN</option>
-        <option value="pl">PL</option>
-      </select>
+      <div class="lang-switcher">
+        <select id="languageSelect">
+          <option value="en">EN</option>
+          <option value="pl">PL</option>
+        </select>
+      </div>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <h1 data-key="hero_title">Daguerr Photo Assistant</h1>
     <p data-key="hero_subtitle">
@@ -69,9 +76,10 @@
     </div>
   </div>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 DAGUERR</p>
   </footer>
+
 </body>
 </html>
-
