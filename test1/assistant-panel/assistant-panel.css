@@ -157,9 +157,10 @@ body {
 /* INPUT AREA */
 .assistant-input-area {
   display: flex;
-  padding: 20px;
+  padding: 16px 20px;
   background: #111;
   border-top: 1px solid #1f1f1f;
+  gap: 12px;
 }
 
 .assistant-input-area input {
