@@ -51,6 +51,10 @@ body {
 }
 
 /* JĘZYKI — pod menu, centralnie */
+.lang-switcher {
+    margin-top: 20px;   /* <<< przesuwa języki niżej */
+}
+
 .lang-switcher select {
     padding: 6px 10px;
     background: #222;
@@ -58,7 +62,6 @@ body {
     border: 1px solid #444;
     border-radius: 4px;
 }
-
 
 /* HERO */
 .hero {
