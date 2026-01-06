@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DAGUERR — Photography Intelligence</title>
 
-  <!-- MAIN STYLES -->
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="assistant.css" />
-<link rel="stylesheet" href="assistant-panel/assistant-panel.css" />
+  <!-- STYLES -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assistant.css" />
 
-  <!-- SCRIPTS -->
+  <!-- LANGUAGE SCRIPT -->
   <script src="lang.js" defer></script>
 </head>
 
@@ -18,59 +17,45 @@
 
   <!-- HEADER -->
   <header class="header">
-  <div class="logo">DAGUERR</div>
+    <div class="logo">DAGUERR</div>
 
-  <nav class="main-nav">
-    <a href="#" data-key="menu_assistant">Photo Assistant</a>
-    <a href="#" data-key="menu_gear">Gear Finder</a>
-    <a href="#" data-key="menu_world">Photo World</a>
-    <a href="#" data-key="menu_encyclopedia">Encyclopedia</a>
-  </nav>
+    <nav class="main-nav">
+      <a href="#" class="module-button">Photo Planner</a>
+      <a href="#" class="module-button">Gear Advisor</a>
+      <a href="#" class="module-button">Lighting Assistant</a>
+      <a href="#" class="module-button">Composition Coach</a>
+      <a href="#" class="module-button">Creative Generator</a>
+    </nav>
 
-  <div class="lang-switcher">
-    <select id="languageSelect">
-      <option value="en">EN</option>
-      <option value="pl">PL</option>
-    </select>
-  </div>
-</header>
-
-  <div class="why-link-wrapper">
-  <a href="why.html" class="why-link">Why DAGUERR Assistant →</a>
-</div>
+    <div class="lang-switcher">
+      <select id="languageSelect">
+        <option value="en">EN</option>
+        <option value="pl">PL</option>
+      </select>
+    </div>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
-    <h1 data-key="hero_title">Daguerr Photo Assistant</h1>
-    <p data-key="hero_subtitle">
-      Your intelligent companion for photography — planning, learning, creativity, and workflow.
-    </p>
-
-    <button 
-  id="openAssistantBtn" 
-  class="cta-button" 
-  data-key="hero_button"
-  onclick="window.location.href='assistant-panel/assistant-panel.html'"
->
-  Open Assistant
-</button>
-
+    <h1>DAGUERR Photo Assistant</h1>
+    <p>Your intelligent companion for photography — planning, learning, creativity, and workflow.</p>
   </section>
 
-  <div style="text-align:center; margin:10px 0;">
-  <input id="apiKeyInput" 
-         type="password" 
-         placeholder="Paste your OpenAI API Key"
-         style="padding:10px; width:300px; border-radius:6px; border:1px solid #333; background:#111; color:#fff;">
-</div>
+  <!-- API KEY -->
+  <div style="text-align:center; margin:20px 0;">
+    <input id="apiKeyInput" 
+           type="password" 
+           placeholder="Paste your OpenAI API Key"
+           style="padding:10px; width:300px; border-radius:6px; border:1px solid #333; background:#111; color:#fff;">
+  </div>
 
   <!-- CHAT UI -->
-<div class="assistant-output"></div>
+  <div class="assistant-output"></div>
 
-<div class="assistant-input-area">
-  <input id="assistantInput" type="text" placeholder="Write your message...">
-  <button id="assistantSend">Send</button>
-</div>
+  <div class="assistant-input-area">
+    <input id="assistantInput" type="text" placeholder="Write your message...">
+    <button id="assistantSend">Send</button>
+  </div>
 
   <!-- MODAL -->
   <div id="assistantModal" class="assistant-modal">
@@ -104,6 +89,7 @@
     <p>© 2026 DAGUERR</p>
   </footer>
 
+  <!-- MAIN SCRIPT -->
   <script src="assistant.js"></script>
 
 </body>
