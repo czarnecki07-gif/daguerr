@@ -24,6 +24,7 @@ const translations = {
 
 document.getElementById("languageSelect").addEventListener("change", function () {
     const lang = this.value;
+
     document.querySelectorAll("[data-key]").forEach(el => {
         const key = el.getAttribute("data-key");
         el.textContent = translations[lang][key] || translations["en"][key];
