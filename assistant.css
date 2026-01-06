@@ -52,7 +52,6 @@
 .assistant-column h3 {
     margin-bottom: 10px;
     font-size: 18px;
-    color: #1a1a1a;
 }
 
 .assistant-column ul {
@@ -61,15 +60,3 @@
     font-size: 14px;
     line-height: 1.5;
 }
-
-@media (max-width: 768px) {
-    .assistant-modal-content {
-        margin: 20px;
-        padding: 20px;
-    }
-
-    .assistant-columns {
-        flex-direction: column;
-    }
-}
-
