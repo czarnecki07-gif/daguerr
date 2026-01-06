@@ -352,3 +352,10 @@ body {
   color: #3b82f6 !important;   /* jasny niebieski */
   text-decoration: none !important;
 }
+
+.why-page {
+  background: #000 !important;
+  color: #ddd;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+}
