@@ -1,3 +1,5 @@
+alert("assistant-panel.js działa!");
+
 // ========== PODSTAWOWA KONFIGURACJA ==========
 
 // Aktualny moduł (domyślnie planner)
