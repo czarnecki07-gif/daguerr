@@ -76,3 +76,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setupLanguageSync();
     loadAssistantData();
 });
+console.log("Assistant JS loaded");
