@@ -14,6 +14,41 @@ const modules = {
   composition: (text) => `📐 <b>Composition Coach</b><br>Let's refine your framing.<br><br>You asked: "${text}"`,
   creative: (text) => `🎨 <b>Creative Generator</b><br>Let's spark some ideas.<br><br>You asked: "${text}"`
 };
+/* SEND MESSAGE FUNCTION */
+function sendMessage() {
+  const text = input.value.trim();
+  if (!text) return;
+
+  addUserMessage(text);
+  input.value = "";
+
+  const response = modules[currentModule](text);
+  addAssistantMessage(response);
+}
+
+/* ADD USER MESSAGE */
+function addUserMessage(text) {
+  const div = document.createElement("div");
+  div.className = "msg user-msg";
+  div.innerHTML = text;
+  output.appendChild(div);
+  output.scrollTop = output.scrollHeight;
+}
+
+/* ADD ASSISTANT MESSAGE */
+function addAssistantMessage(text) {
+  const div = document.createElement("div");
+  div.className = "msg assistant-msg";
+  div.innerHTML = text;
+  output.appendChild(div);
+  output.scrollTop = output.scrollHeight;
+}
+
+/* ENTER KEY SUPPORT */
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") sendMessage();
+});
+
 
 /* SIDEBAR CLICK HANDLER */
 
@@ -28,6 +63,14 @@ const modules = {
 function sendMessage() {
   const text = input.value.trim();
   if (!text) return;
+
+  addUserMessage(text);
+  input.value = "";
+
+  const response = modules[currentModule](text);
+  addAssistantMessage(response);
+}
+
 
   // User bubble
   const userMsg = document.createElement("div");
