@@ -92,6 +92,12 @@ document.querySelectorAll(".module-btn").forEach((btn) => {
     if (!mod || !modules[mod]) return;
     currentModule = mod;
 
+    document.querySelectorAll(".module-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
+});
+
+
     // (opcjonalnie) podświetl aktywny moduł
     document.querySelectorAll(".module-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
@@ -103,3 +109,6 @@ const defaultBtn = document.querySelector('.module-btn[data-module="planner"]');
 if (defaultBtn) {
   defaultBtn.classList.add("active");
 }
+
+const defaultBtn = document.querySelector('.module-btn[data-module="planner"]');
+if (defaultBtn) defaultBtn.classList.add("active");
