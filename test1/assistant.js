@@ -137,3 +137,65 @@ async function sendMessageToAI(userMessage) {
   return data.choices?.[0]?.message?.content || "Brak odpowiedzi.";
 }
 
+// --- CHAT LOGIC ---
+
+function addMessage(text, sender) {
+  const output = document.querySelector(".assistant-output");
+
+  const div = document.createElement("div");
+  div.className = `message ${sender}`;
+  div.textContent = text;
+
+  output.appendChild(div);
+  output.scrollTop = output.scrollHeight;
+}
+
+async function sendMessageToAI(userMessage) {
+  const apiKey = document.getElementById("apiKeyInput")?.value.trim();
+
+  if (!apiKey) {
+    return "Please paste your OpenAI API Key.";
+  }
+
+  const body = {
+    model: "gpt-4o-mini",
+    messages: [
+      { role: "system", content: "You are DAGUERR Photo Assistant." },
+      { role: "user", content: userMessage }
+    ]
+  };
+
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`
+    },
+    body: JSON.stringify(body)
+  });
+
+  const data = await response.json();
+  return data.choices?.[0]?.message?.content || "No response.";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("assistantInput");
+  const button = document.getElementById("assistantSend");
+
+  if (!input || !button) {
+    console.warn("Chat UI not found.");
+    return;
+  }
+
+  button.addEventListener("click", async () => {
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMessage(text, "user");
+    input.value = "";
+
+    const reply = await sendMessageToAI(text);
+    addMessage(reply, "assistant");
+  });
+});
+
