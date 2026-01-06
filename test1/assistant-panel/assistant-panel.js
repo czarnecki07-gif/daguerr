@@ -36,19 +36,20 @@ function sendMessage() {
   const text = input.value.trim();
   if (!text) return;
 
-  // Dodaj wiadomość użytkownika
-  addUserMessage(text);
+  console.log("currentModule =", currentModule);
+  console.log("moduleFn =", modules[currentModule]);
 
-  // Czyścimy input
+  addUserMessage(text);
   input.value = "";
 
-  // Generujemy odpowiedź z aktualnego modułu
   const moduleFn = modules[currentModule] || modules["planner"];
-  const response = moduleFn(text);
+  const response = moduleFn ? moduleFn(text) : "⚠️ Module not found.";
 
-  // Dodajemy wiadomość asystenta
+  console.log("response =", response);
+
   addAssistantMessage(response);
 }
+
 
 // ========== RENDEROWANIE WIADOMOŚCI ==========
 
