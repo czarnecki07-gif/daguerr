@@ -83,28 +83,27 @@ if (input) {
     }
   });
 }
-
 // ========== WYBÓR MODUŁU (NOWE PRZYCISKI W JEDNEJ LINII) ==========
 
 document.querySelectorAll(".module-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const mod = btn.dataset.module;
     if (!mod || !modules[mod]) return;
+
+    // ustaw aktualny moduł
     currentModule = mod;
 
+    // usuń active ze wszystkich
     document.querySelectorAll(".module-btn").forEach(b => b.classList.remove("active"));
+
+    // dodaj active do klikniętego
     btn.classList.add("active");
   });
 });
 
+// ========== USTAW DOMYŚLNIE AKTYWNY MODUŁ ==========
 
-    // (opcjonalnie) podświetl aktywny moduł
-    document.querySelectorAll(".module-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-  });
-});
-
-// Ustaw domyślnie aktywny moduł (planner), jeśli jest przycisk
 const defaultBtn = document.querySelector('.module-btn[data-module="planner"]');
-if (defaultBtn) {defaultBtn.classList.add("active");
+if (defaultBtn) {
+  defaultBtn.classList.add("active");
 }
