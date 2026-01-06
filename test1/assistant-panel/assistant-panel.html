@@ -54,22 +54,33 @@
     <!-- MAIN PANEL -->
     <main class="assistant-main">
 
-      <div id="assistantOutput" class="assistant-output">
-        <div class="assistant-welcome">
-          <h2>Welcome to DAGUERR Assistant 2.0</h2>
-          <p>Select a module from the left or start typing below.</p>
-        </div>
-      </div>
+     <div class="assistant-center">
 
-      <!-- INPUT AREA -->
-      <div class="assistant-input-area">
-        <input 
-          id="assistantInput" 
-          type="text" 
-          placeholder="Ask DAGUERR anything..."
-        />
-        <button id="assistantSend">Send</button>
-      </div>
+  <!-- WELCOME -->
+  <div class="assistant-welcome">
+    <h2>Welcome to DAGUERR Assistant 2.0</h2>
+    <p>Select a module from the left or start typing below.</p>
+  </div>
+
+  <!-- MODULES INLINE -->
+  <div class="assistant-modules-inline">
+    <button class="module-btn" data-module="planner">Photo Planner</button>
+    <button class="module-btn" data-module="gear">Gear Advisor</button>
+    <button class="module-btn" data-module="lighting">Lighting Assistant</button>
+    <button class="module-btn" data-module="composition">Composition Coach</button>
+    <button class="module-btn" data-module="creative">Creative Generator</button>
+  </div>
+
+  <!-- INPUT -->
+  <div class="assistant-input-area">
+    <input id="assistantInput" type="text" placeholder="Ask DAGUERR anything..." />
+    <button id="assistantSend">Send</button>
+  </div>
+
+  <!-- OUTPUT -->
+  <div id="assistantOutput" class="assistant-output"></div>
+
+</div>
 
     </main>
 
