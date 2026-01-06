@@ -1,1 +1,55 @@
+{
+  "role": {
+    "en": "Your Photography Assistant",
+    "pl": "Twój Asystent Fotograficzny"
+  },
+
+  "welcome": {
+    "en": "I'm here to help you plan, learn, and create better photos.",
+    "pl": "Jestem tutaj, aby pomóc Ci planować, uczyć się i tworzyć lepsze zdjęcia."
+  },
+
+  "instructions": {
+    "en": [
+      "Describe your photo idea.",
+      "Tell me your gear.",
+      "Ask for lighting tips.",
+      "Ask for composition advice."
+    ],
+    "pl": [
+      "Opisz swój pomysł na zdjęcie.",
+      "Podaj swój sprzęt.",
+      "Zapytaj o oświetlenie.",
+      "Zapytaj o kompozycję."
+    ]
+  },
+
+  "features": {
+    "en": [
+      "Lighting analysis",
+      "Composition guidance",
+      "Gear recommendations",
+      "Creative prompts"
+    ],
+    "pl": [
+      "Analiza oświetlenia",
+      "Wskazówki kompozycyjne",
+      "Rekomendacje sprzętu",
+      "Kreatywne podpowiedzi"
+    ]
+  },
+
+  "examples": {
+    "en": [
+      "How to shoot portraits at sunset?",
+      "What lens for wildlife?",
+      "How to photograph stars?"
+    ],
+    "pl": [
+      "Jak robić portrety o zachodzie słońca?",
+      "Jaki obiektyw do fotografii dzikiej przyrody?",
+      "Jak fotografować gwiazdy?"
+    ]
+  }
+}
 
