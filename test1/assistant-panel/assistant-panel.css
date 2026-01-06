@@ -239,10 +239,3 @@ body {
   background-color: rgba(0, 123, 255, 0.15) !important;
   color: #003366 !important;
 }
-
-.module-btn.active {
-  border: 2px solid #007bff !important;
-  background-color: rgba(0, 123, 255, 0.15) !important;
-  color: #003366 !important; /* ciemny, czytelny tekst */
-  font-weight: 600; /* opcjonalnie: lepsza czytelność */
-}
