@@ -194,7 +194,7 @@ body {
 .why-link-wrapper {
   width: 100% !important;
   text-align: center !important;
-  margin: 5px 0 0 0 !important; /* minimalny odstęp */
+  margin: 0 !important; /* ZERO odstępu */
   display: block !important;
 }
 
