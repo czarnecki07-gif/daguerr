@@ -233,10 +233,12 @@ body {
   border-radius: 8px;
   border: 1px solid #1f1f1f;
 }
+
 .module-btn.active {
-  color: #1e3a8a !important;  /* ciemny niebieski tekst */
-  font-weight: 700;
-  border-color: #1e3a8a;
+  color: #0a2a6a !important;      /* ciemniejszy, bardziej czytelny niebieski */
+  font-weight: 800;               /* mocniejszy, ale nadal elegancki */
+  border-color: #0a2a6a;
+  text-shadow: 0 0 1px #ffffff80; /* subtelne rozjaśnienie konturu */
 }
 
 .module-btn.active:hover {
