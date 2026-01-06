@@ -235,10 +235,9 @@ body {
 }
 
 .module-btn.active {
-  color: #0a2a6a !important;      /* ciemniejszy, bardziej czytelny niebieski */
-  font-weight: 800;               /* mocniejszy, ale nadal elegancki */
-  border-color: #0a2a6a;
-  text-shadow: 0 0 1px #ffffff80; /* subtelne rozjaśnienie konturu */
+  color: #3b82f6 !important;   /* jasnoniebieski tekst */
+  font-weight: 700;
+  border-color: #3b82f6 !important;
 }
 
 .module-btn.active:hover {
