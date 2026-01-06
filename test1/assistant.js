@@ -77,3 +77,24 @@ document.addEventListener("DOMContentLoaded", () => {
     loadAssistantData();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("assistantInput");
+  const button = document.getElementById("assistantSend");
+
+  if (!input || !button) {
+    console.warn("Chat UI not found in DOM.");
+    return;
+  }
+
+  button.addEventListener("click", async () => {
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMessage(text, "user");
+    input.value = "";
+
+    const reply = await sendMessageToAI(text);
+    addMessage(reply, "assistant");
+  });
+});
+
