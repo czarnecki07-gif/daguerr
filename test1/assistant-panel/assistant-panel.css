@@ -251,10 +251,11 @@ body {
   color: #1e3a8a;
   border-color: #1e3a8a;
 }
-
 .why-link-wrapper {
-  margin-top: 20px;
+  width: 100%;
   text-align: center;
+  margin: 20px 0 40px 0;
+  display: block;
 }
 
 .why-link {
