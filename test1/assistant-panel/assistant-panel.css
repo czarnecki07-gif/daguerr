@@ -129,7 +129,10 @@ body {
   display: flex;
   flex-direction: column;
   background: #0d0d0d;
+  height: 100%;
+  overflow: hidden;
 }
+
 
 /* OUTPUT */
 .assistant-output {
