@@ -1,0 +1,92 @@
+/* Tło sekcji asystenta – trochę jaśniejsze niż hero na stronie głównej */
+.assistant-main {
+    background: var(--black);
+    color: white;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.assistant-hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* MODAL */
+
+.assistant-modal {
+    display: none; /* domyślnie ukryty */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.assistant-modal-content {
+    background-color: var(--white);
+    color: var(--black);
+    margin: 60px auto;
+    padding: 30px 30px 40px;
+    border-radius: 8px;
+    max-width: 1100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.assistant-close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.assistant-close:hover {
+    color: var(--gray-dark);
+}
+
+.assistant-welcome {
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-style: italic;
+    color: var(--gray-dark);
+}
+
+.assistant-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.assistant-column {
+    flex: 1 1 250px;
+    min-width: 0;
+}
+
+.assistant-column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--black);
+}
+
+.assistant-column ul {
+    list-style-type: disc;
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .assistant-modal-content {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .assistant-columns {
+        flex-direction: column;
+    }
+}
