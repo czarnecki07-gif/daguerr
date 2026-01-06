@@ -1,7 +1,3 @@
-/* ===========================
-   RESET & GLOBAL
-=========================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -15,19 +11,6 @@ html, body {
     line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-/* ===========================
-   COLORS
-=========================== */
-
 :root {
     --black: #0f0f0f;
     --white: #f7f7f5;
@@ -36,10 +19,7 @@ ul {
     --accent: #4da6ff;
 }
 
-/* ===========================
-   HEADER
-=========================== */
-
+/* HEADER */
 .header {
     width: 100%;
     padding: 20px 40px;
@@ -53,7 +33,6 @@ ul {
 .logo {
     font-size: 26px;
     font-weight: 700;
-    letter-spacing: 1px;
 }
 
 .main-nav {
@@ -63,7 +42,6 @@ ul {
 
 .main-nav a {
     color: var(--gray);
-    font-size: 15px;
     transition: 0.2s;
 }
 
@@ -77,13 +55,9 @@ ul {
     border: 1px solid #333;
     padding: 6px 10px;
     border-radius: 4px;
-    cursor: pointer;
 }
 
-/* ===========================
-   HERO SECTION
-=========================== */
-
+/* HERO */
 .hero {
     text-align: center;
     padding: 120px 20px;
@@ -93,7 +67,6 @@ ul {
 
 .hero h1 {
     font-size: 48px;
-    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -103,10 +76,7 @@ ul {
     margin-bottom: 40px;
 }
 
-/* ===========================
-   BUTTONS
-=========================== */
-
+/* BUTTON */
 .cta-button {
     background: var(--accent);
     color: #000;
@@ -123,10 +93,7 @@ ul {
     background: #3399ff;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
-
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 40px 0;
@@ -134,22 +101,4 @@ ul {
     font-size: 14px;
     border-top: 1px solid #1f1f1f;
     margin-top: 80px;
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .main-nav {
-        gap: 18px;
-    }
 }
