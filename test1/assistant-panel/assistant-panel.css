@@ -182,14 +182,15 @@ body {
 }
 
 .module-btn {
-  background: #151515;
-  border: 1px solid #2a2a2a;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
   padding: 10px 18px;
   border-radius: 6px;
-  color: #fff;
+  color: #1a1a1a;
   cursor: pointer;
   transition: 0.2s;
 }
+
 
 .module-btn:hover {
   background: #1f1f1f;
