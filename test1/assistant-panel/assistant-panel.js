@@ -106,9 +106,5 @@ document.querySelectorAll(".module-btn").forEach((btn) => {
 
 // Ustaw domyślnie aktywny moduł (planner), jeśli jest przycisk
 const defaultBtn = document.querySelector('.module-btn[data-module="planner"]');
-if (defaultBtn) {
-  defaultBtn.classList.add("active");
+if (defaultBtn) {defaultBtn.classList.add("active");
 }
-
-const defaultBtn = document.querySelector('.module-btn[data-module="planner"]');
-if (defaultBtn) defaultBtn.classList.add("active");
