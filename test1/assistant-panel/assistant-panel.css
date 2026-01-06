@@ -359,3 +359,8 @@ body {
   font-family: Arial, sans-serif;
   padding: 40px 20px;
 }
+
+body.why-page {
+  background: #000 !important;
+  background-color: #000 !important;
+}
