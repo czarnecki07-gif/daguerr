@@ -345,3 +345,10 @@ body {
 .why-link:hover {
   text-decoration: underline;
 }
+
+.why-link,
+.why-link:visited,
+.why-link:active {
+  color: #3b82f6 !important;   /* jasny niebieski */
+  text-decoration: none !important;
+}
