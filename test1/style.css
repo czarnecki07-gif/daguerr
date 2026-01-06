@@ -23,10 +23,11 @@ body {
 }
 
 .logo {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
+    font-size: 90px;        /* DUŻA czcionka */
+    font-weight: 900;       /* BARDZO gruba */
+    letter-spacing: 6px;    /* Premium spacing */
+    margin-bottom: 24px;    /* Większy odstęp od menu */
+    text-align: center;     /* Wycentrowanie */
 }
 
 /* NAV + LANGUAGE ROW */
