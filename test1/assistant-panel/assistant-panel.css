@@ -360,6 +360,30 @@ body {
   padding: 40px 20px;
 }
 
+/* --- WHY LINK FIX --- */
+
+.why-link-wrapper {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0 40px 0;
+  display: block;
+}
+
+.why-link,
+.why-link:visited,
+.why-link:active {
+  color: #3b82f6 !important;     /* jasny niebieski */
+  font-size: 24px !important;    /* większy tekst */
+  font-weight: 700 !important;   /* pogrubiony */
+  text-decoration: none !important; /* bez podkreślenia */
+  letter-spacing: 0.5px;
+}
+
+.why-link:hover {
+  opacity: 0.8;
+}
+
+
 body.why-page {
   background: #000 !important;
   background-color: #000 !important;
