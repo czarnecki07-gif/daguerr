@@ -77,6 +77,7 @@ document.querySelectorAll(".module-btn").forEach((btn) => {
     document.querySelectorAll(".module-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
   });
+}); // ← TEN NAWIAS BYŁ BRAKOWANY
 
 // ========== DOMYŚLNY MODUŁ ==========
 
