@@ -80,6 +80,47 @@ function fillList(id, primary, fallback) {
 
 
 // ======================================================
+//  MODAL LOGIC
+// ======================================================
+
+function setupModal() {
+  const modal = document.getElementById("assistantModal");
+  const openBtn = document.getElementById("openAssistantBtn");
+  const closeBtn = document.getElementById("closeAssistantBtn");
+
+  openBtn.addEventListener("click", () => {
+    modal.classList.add("visible");
+    renderAssistant(currentLang);
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("visible");
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.classList.remove("visible");
+    }
+  });
+}
+
+
+// ======================================================
+//  LANGUAGE SYNC
+// ======================================================
+
+function setupLanguageSync() {
+  const select = document.getElementById("languageSelect");
+  currentLang = select.value;
+
+  select.addEventListener("change", () => {
+    currentLang = select.value;
+    renderAssistant(currentLang);
+  });
+}
+
+
+// ======================================================
 //  CHAT UI LOGIC
 // ======================================================
 
@@ -145,6 +186,8 @@ function setupModuleButtons() {
 // ======================================================
 
 document.addEventListener("DOMContentLoaded", () => {
+  setupModal();
+  setupLanguageSync();
   setupModuleButtons();
   loadAssistantData();
 
