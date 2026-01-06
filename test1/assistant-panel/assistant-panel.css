@@ -251,3 +251,85 @@ body {
   color: #1e3a8a;
   border-color: #1e3a8a;
 }
+
+.why-link-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.why-link {
+  color: #3b82f6;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.why-link:hover {
+  text-decoration: underline;
+}
+
+.why-page {
+  background: #0a0a0a;
+  color: #ddd;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+.why-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.why-container h1 {
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+}
+
+.why-container .subtitle {
+  text-align: center;
+  font-size: 20px;
+  color: #3b82f6;
+  margin-bottom: 30px;
+}
+
+.why-container .intro {
+  font-size: 17px;
+  margin-bottom: 40px;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.why-item h3 {
+  font-size: 20px;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+
+.why-item p {
+  color: #bbb;
+  font-size: 15px;
+}
+
+.back-home {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.back-home a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.back-home a:hover {
+  text-decoration: underline;
+}
