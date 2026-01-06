@@ -29,6 +29,18 @@ const modules = {
 };
 
 // ========== WYSYŁANIE WIADOMOŚCI ==========
+document.querySelectorAll(".module-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // usuń active ze wszystkich
+    document.querySelectorAll(".module-btn").forEach(b => b.classList.remove("active"));
+
+    // dodaj active do klikniętego
+    btn.classList.add("active");
+
+    // ustaw moduł
+    currentModule = btn.dataset.module;
+  });
+});
 
 function sendMessage() {
   if (!input || !output) return;
