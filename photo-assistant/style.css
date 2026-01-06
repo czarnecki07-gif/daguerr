@@ -1,6 +1,6 @@
-/* TŁO SEKCJI */
+/* TŁO SEKCJI ASYSTENTA */
 .assistant-main {
-    background: var(--black);
+    background: #1a1a1a;
     color: white;
     min-height: 70vh;
     display: flex;
@@ -28,8 +28,8 @@
 
 /* MODAL — OKNO */
 .assistant-modal-content {
-    background-color: var(--white);
-    color: var(--black);
+    background-color: #f7f7f5;
+    color: #1a1a1a;
     margin: 60px auto;
     padding: 30px 30px 40px;
     border-radius: 8px;
@@ -47,18 +47,18 @@
 }
 
 .assistant-close:hover {
-    color: var(--gray-dark);
+    color: #3a3a3a;
 }
 
-/* WSTĘP */
+/* WSTĘP W MODALU */
 .assistant-welcome {
     margin-top: 4px;
     margin-bottom: 24px;
     font-style: italic;
-    color: var(--gray-dark);
+    color: #3a3a3a;
 }
 
-/* KOLUMNY */
+/* KOLUMNY W MODALU */
 .assistant-columns {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +72,7 @@
 .assistant-column h3 {
     margin-bottom: 10px;
     font-size: 18px;
-    color: var(--black);
+    color: #1a1a1a;
 }
 
 .assistant-column ul {
