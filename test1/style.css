@@ -15,40 +15,34 @@ body {
 /* HEADER */
 .header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 40px;
+    flex-direction: column;   /* Ustawiamy wszystko pionowo */
+    align-items: center;      /* Wycentrowanie */
+    padding: 30px 40px;
     background: #111;
     border-bottom: 1px solid #222;
 }
 
+/* LOGO */
 .logo {
-    font-size: 90px;        /* DUŻA czcionka */
-    font-weight: 900;       /* BARDZO gruba */
-    letter-spacing: 6px;    /* Premium spacing */
-    margin-bottom: 24px;    /* Większy odstęp od menu */
-    text-align: center;     /* Wycentrowanie */
+    font-size: 80px;          /* Bardzo duża czcionka */
+    font-weight: 900;         /* Bardzo gruba */
+    letter-spacing: 6px;
+    margin-bottom: 25px;      /* Odstęp od menu */
+    text-align: center;
 }
 
-/* NAV + LANGUAGE ROW */
-.header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1100px;
-}
-
-/* NAVIGATION */
+/* MENU — poziomy pasek */
 .main-nav {
     display: flex;
-    gap: 28px;
+    gap: 32px;                /* Odstępy między linkami */
+    justify-content: center;
+    margin-bottom: 20px;      /* Odstęp od języków */
 }
 
 .main-nav a {
     color: #ccc;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
     transition: color .2s ease;
 }
 
@@ -56,7 +50,7 @@ body {
     color: #fff;
 }
 
-/* LANGUAGE SWITCHER */
+/* JĘZYKI — pod menu, centralnie */
 .lang-switcher select {
     padding: 6px 10px;
     background: #222;
@@ -64,6 +58,7 @@ body {
     border: 1px solid #444;
     border-radius: 4px;
 }
+
 
 /* HERO */
 .hero {
