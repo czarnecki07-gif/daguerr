@@ -40,7 +40,6 @@
 .assistant-modal.visible {
     opacity: 1;
     pointer-events: auto;
-    animation: modalFadeIn 0.25s ease-out;
 }
 
 /* ===========================
@@ -65,7 +64,6 @@
 .assistant-modal.visible .assistant-modal-content {
     opacity: 1;
     transform: translateY(0);
-    animation: modalSlideUp 0.35s ease-out;
 }
 
 /* ===========================
