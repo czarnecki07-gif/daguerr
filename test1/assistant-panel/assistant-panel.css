@@ -139,6 +139,8 @@ body {
   flex: 1;
   padding: 30px;
   overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .assistant-welcome {
