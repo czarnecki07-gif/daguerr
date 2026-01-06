@@ -1,19 +1,10 @@
-alert("assistant-panel.js działa!");
+// ========== KONFIGURACJA ==========
 
-// ========== PODSTAWOWA KONFIGURACJA ==========
-
-// Aktualny moduł (domyślnie planner)
 let currentModule = "planner";
 
-// Pobieramy elementy z DOM
-const output = document.getElementById("assistantOutput");
 const input = document.getElementById("assistantInput");
+const output = document.getElementById("assistantOutput");
 const sendBtn = document.getElementById("assistantSend");
-
-// Prosta ochrona: jeśli któregoś elementu brakuje, przerwij
-if (!output || !input || !sendBtn) {
-  console.error("Brakuje elementów assistantOutput / assistantInput / assistantSend w HTML.");
-}
 
 // ========== MODUŁY ==========
 
@@ -33,25 +24,17 @@ const modules = {
 // ========== WYSYŁANIE WIADOMOŚCI ==========
 
 function sendMessage() {
-  if (!input || !output) return;
-
   const text = input.value.trim();
   if (!text) return;
-
-  console.log("currentModule =", currentModule);
-  console.log("moduleFn =", modules[currentModule]);
 
   addUserMessage(text);
   input.value = "";
 
   const moduleFn = modules[currentModule] || modules["planner"];
-  const response = moduleFn ? moduleFn(text) : "⚠️ Module not found.";
-
-  console.log("response =", response);
+  const response = moduleFn(text);
 
   addAssistantMessage(response);
 }
-
 
 // ========== RENDEROWANIE WIADOMOŚCI ==========
 
@@ -71,40 +54,32 @@ function addAssistantMessage(text) {
   output.scrollTop = output.scrollHeight;
 }
 
-// ========== ZDARZENIA (CLICK + ENTER) ==========
+// ========== ZDARZENIA ==========
 
-if (sendBtn) {
-  sendBtn.addEventListener("click", sendMessage);
-}
+sendBtn.addEventListener("click", sendMessage);
 
-if (input) {
-  input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      sendMessage();
-    }
-  });
-}
-// ========== WYBÓR MODUŁU (NOWE PRZYCISKI W JEDNEJ LINII) ==========
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    sendMessage();
+  }
+});
+
+// ========== WYBÓR MODUŁU ==========
 
 document.querySelectorAll(".module-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const mod = btn.dataset.module;
     if (!mod || !modules[mod]) return;
 
-    // ustaw aktualny moduł
     currentModule = mod;
 
-    // usuń active ze wszystkich
     document.querySelectorAll(".module-btn").forEach(b => b.classList.remove("active"));
-
-    // dodaj active do klikniętego
     btn.classList.add("active");
   });
+});
 
-// ========== USTAW DOMYŚLNIE AKTYWNY MODUŁ ==========
+// ========== DOMYŚLNY MODUŁ ==========
 
 const defaultBtn = document.querySelector('.module-btn[data-module="planner"]');
-if (defaultBtn) {
-  defaultBtn.classList.add("active");
-}
+if (defaultBtn) defaultBtn.classList.add("active");
