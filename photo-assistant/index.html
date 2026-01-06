@@ -7,26 +7,20 @@
 
     <!-- wspólny styl z głównej strony -->
     <link rel="stylesheet" href="../style.css">
-    <!-- styl specyficzny dla asystenta (modal) -->
+
+    <!-- styl modala (ten plik generujesz poniżej) -->
     <link rel="stylesheet" href="style.css">
 
-    <style>
-.assistant-modal {
-  background: white;
-  padding: 40px;
-  border: 2px solid black;
-}
-</style>
-
-    <!-- wspólny system języków UI -->
+    <!-- system języków -->
     <script src="../lang.js" defer></script>
-    <!-- logika asystenta -->
+
+    <!-- logika modala -->
     <script src="assistant.js" defer></script>
 </head>
 
 <body>
 
-    <!-- HEADER (taki jak na stronie głównej) -->
+    <!-- HEADER -->
     <header class="header">
         <div class="logo">DAGUERR</div>
 
@@ -55,7 +49,7 @@
         </div>
     </header>
 
-    <!-- SEKCJA ASYSTENTA -->
+    <!-- HERO -->
     <main class="assistant-main">
         <section class="assistant-hero">
             <h1 data-key="hero_title">Daguerr Photo Assistant</h1>
@@ -69,9 +63,10 @@
         </section>
     </main>
 
-    <!-- MODAL ASYSTENTA -->
+    <!-- MODAL -->
     <div id="assistantModal" class="assistant-modal">
         <div class="assistant-modal-content">
+
             <span id="closeAssistantBtn" class="assistant-close">&times;</span>
 
             <h2 id="assistantRole"></h2>
@@ -93,6 +88,7 @@
                     <ul id="assistantExamples"></ul>
                 </div>
             </div>
+
         </div>
     </div>
 
