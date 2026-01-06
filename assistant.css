@@ -1,7 +1,4 @@
-/* ===========================
-   MODAL BACKDROP
-=========================== */
-
+/* BACKDROP */
 .assistant-modal {
     position: fixed;
     inset: 0;
@@ -12,16 +9,12 @@
     z-index: 9999;
 }
 
-/* Modal widoczny */
 .assistant-modal.visible {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* ===========================
-   MODAL WINDOW
-=========================== */
-
+/* WINDOW */
 .assistant-modal-content {
     background: #f7f7f5;
     color: #1a1a1a;
@@ -37,16 +30,12 @@
     transition: opacity .35s ease-out, transform .35s ease-out;
 }
 
-/* Animacja wejścia okna */
 .assistant-modal.visible .assistant-modal-content {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* ===========================
-   CLOSE BUTTON
-=========================== */
-
+/* CLOSE BUTTON */
 .assistant-close {
     float: right;
     font-size: 32px;
@@ -54,23 +43,13 @@
     font-weight: bold;
 }
 
-.assistant-close:hover {
-    color: #555;
-}
-
-/* ===========================
-   TEXT
-=========================== */
-
+/* TEXT */
 .assistant-welcome {
     margin-bottom: 20px;
     font-style: italic;
 }
 
-/* ===========================
-   COLUMNS
-=========================== */
-
+/* COLUMNS */
 .assistant-columns {
     display: flex;
     flex-wrap: wrap;
@@ -90,27 +69,20 @@
     padding-left: 20px;
 }
 
-/* ===========================
-   HIDE RAW LISTS ON PAGE
-=========================== */
-
+/* HIDE RAW LISTS ON PAGE */
 #assistantInstructions,
 #assistantFeatures,
 #assistantExamples {
     display: none;
 }
 
-/* Pokazuj listy tylko w modalu */
 .assistant-modal.visible #assistantInstructions,
 .assistant-modal.visible #assistantFeatures,
 .assistant-modal.visible #assistantExamples {
     display: block;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .assistant-modal-content {
         margin: 20px;
