@@ -1,0 +1,30 @@
+{
+  "ideas": [
+    {
+      "group": "Portrait",
+      "items": [
+        "Studio Portrait",
+        "Natural Light Portrait",
+        "Reporter Flash Portrait"
+      ]
+    },
+    {
+      "group": "Architecture",
+      "items": [
+        "Modern Buildings",
+        "Historical Sites",
+        "Interior Spaces"
+      ]
+    }
+  ],
+  "calculators": {
+    "exposure": true,
+    "handheld": true,
+    "hyperfocal": false
+  },
+  "guides": [
+    "Studio Setup",
+    "Darkroom Setup",
+    "Camera Quick Guide"
+  ]
+}

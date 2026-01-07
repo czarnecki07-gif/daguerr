@@ -1,0 +1,7 @@
+[
+  { "id": "historia", "name": "Historia" },
+  { "id": "sprzet", "name": "Sprzęt" },
+  { "id": "techniki", "name": "Techniki" },
+  { "id": "postprodukcja", "name": "Postprodukcja" },
+  { "id": "inspiracje", "name": "Inspiracje" }
+]

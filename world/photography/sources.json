@@ -1,0 +1,94 @@
+{
+  "sources": [
+    {
+      "id": "petapixel",
+      "type": "rss",
+      "category": "sprzet",
+      "url": "https://petapixel.com/feed/"
+    },
+    {
+      "id": "dpreview",
+      "type": "rss",
+      "category": "sprzet",
+      "url": "https://www.dpreview.com/feeds/news.xml"
+    },
+    {
+      "id": "fstoppers",
+      "type": "rss",
+      "category": "sprzet",
+      "url": "https://fstoppers.com/feed"
+    },
+    {
+      "id": "dps",
+      "type": "rss",
+      "category": "techniki",
+      "url": "https://digital-photography-school.com/feed/"
+    },
+    {
+      "id": "photographylife",
+      "type": "rss",
+      "category": "techniki",
+      "url": "https://photographylife.com/feed"
+    },
+    {
+      "id": "iso1200",
+      "type": "rss",
+      "category": "inspiracje",
+      "url": "https://iso1200.com/feeds/posts/default"
+    },
+    {
+      "id": "500px",
+      "type": "rss",
+      "category": "inspiracje",
+      "url": "https://iso.500px.com/feed/"
+    },
+    {
+      "id": "lrkillertips",
+      "type": "rss",
+      "category": "postprodukcja",
+      "url": "https://lightroomkillertips.com/feed/"
+    },
+    {
+      "id": "ps-tutorials",
+      "type": "rss",
+      "category": "postprodukcja",
+      "url": "https://photoshoptutorials.ws/feed/"
+    },
+    {
+      "id": "phoblographer",
+      "type": "rss",
+      "category": "historia",
+      "url": "https://www.thephoblographer.com/feed/"
+    },
+    {
+      "id": "magnum",
+      "type": "rss",
+      "category": "historia",
+      "url": "https://www.magnumphotos.com/feed/"
+    },
+    {
+      "id": "yt-petermckinnon",
+      "type": "youtube",
+      "category": "wideo",
+      "channelId": "UC3DkFux8Iv-aYnTRWzwaiBA"
+    },
+    {
+      "id": "yt-northrup",
+      "type": "youtube",
+      "category": "wideo",
+      "channelId": "UCyaN6mg5u8Cjy2ZI4ikWaug"
+    },
+    {
+      "id": "yt-froknows",
+      "type": "youtube",
+      "category": "wideo",
+      "channelId": "UCZ8i1bZ0e0EM4JdG8b4b4_w"
+    },
+    {
+      "id": "yt-mangostreet",
+      "type": "youtube",
+      "category": "wideo",
+      "channelId": "UCvKRFNawVcuz4b9ihUTApCg"
+    }
+  ]
+}
