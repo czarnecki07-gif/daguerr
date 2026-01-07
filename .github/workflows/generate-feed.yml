@@ -1,0 +1,35 @@
+name: Generate Photography Feed
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # co 6 godzin
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install rss-parser node-fetch@2
+
+      - name: Generate feed
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        run: node collector.js
+
+      - name: Commit and push
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add world/photography/feed.json
+          git commit -m "Auto-update feed"
+          git push
