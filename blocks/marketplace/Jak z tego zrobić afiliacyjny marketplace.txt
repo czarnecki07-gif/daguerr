@@ -1,0 +1,26 @@
+Jak z tego zrobić afiliacyjny marketplace?
+W DATA.products zmieniasz tylko:
+
+title
+
+price
+
+category
+
+image (URL lub pusty string "")
+
+tags (lista krótkich tekstów)
+
+link – tutaj wklejasz swój link afiliacyjny (Allegro, Amazon, Envato, cokolwiek).
+
+Przykład jednego produktu z Allegro:
+
+js
+{
+  title: "Statyw foto XYZ",
+  price: "249 zł",
+  category: "Accessories",
+  image: "https://...twoje-zdjęcie-lub-z-allegro.jpg",
+  tags: ["tripod", "lightweight"],
+  link: "https://allegro.pl/oferta/...?utm_source=twoj_ref"
+}

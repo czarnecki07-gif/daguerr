@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hasło — Encyklopedia DAGUERR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="entry-page">
+    <a href="index.html" class="back-link">← Powrót</a>
+    <h1 id="entry-title"></h1>
+    <article id="entry-content"></article>
+  </main>
+
+  <script>
+    async function loadEntry() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      const res = await fetch("data/entries.json");
+      const entries = await res.json();
+
+      const entry = entries.find(e => e.id === id);
+
+      if (!entry) return;
+
+      document.getElementById("entry-title").textContent = entry.title;
+      document.getElementById("entry-content").innerHTML = entry.content;
+    }
+
+    loadEntry();
+  </script>
+
+</body>
+</html>

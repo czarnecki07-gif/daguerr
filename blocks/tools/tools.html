@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>QASSIX Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="tools.css" />
+</head>
+<body>
+  <main class="tools-page">
+    <header class="tools-header">
+      <div class="tools-title">
+        <h1>QASSIX Tools</h1>
+        <p>Wybierz narzędzie → użyj → masz wynik.</p>
+      </div>
+      <nav class="tools-nav">
+        <a href="../../index.html" class="nav-link">← Powrót</a>
+      </nav>
+    </header>
+
+    <section class="tools-section" id="tools-ideas"></section>
+
+    <section class="tools-section" id="tools-calculators">
+      <h2>Kalkulatory</h2>
+
+      <!-- Kalkulator 1: Minimalny czas z ręki -->
+      <div class="tools-calculator">
+        <h3>Minimalny czas naświetlania z ręki</h3>
+        <p class="calc-description">
+          Prosta zasada: czas ≈ 1 / (ogniskowa × crop).  
+          Stabilizacja pozwala wydłużyć czas o kilka EV.
+        </p>
+        <div class="calc-row">
+          <label>
+            Ogniskowa (mm)
+            <input type="number" id="handheld-focal" value="50" min="1" />
+          </label>
+          <label>
+            Crop (np. 1, 1.5, 2)
+            <input type="number" id="handheld-crop" value="1" step="0.1" min="0.5" />
+          </label>
+          <label>
+            Stabilizacja (EV)
+            <input type="number" id="handheld-ev" value="0" step="0.5" min="0" />
+          </label>
+        </div>
+        <button type="button" id="handheld-button" class="calc-button">
+          Oblicz
+        </button>
+        <div class="calc-result" id="handheld-result">
+          Wpisz parametry i kliknij „Oblicz”.
+        </div>
+      </div>
+
+      <!-- Kalkulator 2: Przelicznik ekspozycji – zmiana czasu -->
+      <div class="tools-calculator">
+        <h3>Przelicznik ekspozycji – zmiana czasu</h3>
+        <p class="calc-description">
+          Podaj obecny czas i różnicę EV, a kalkulator przeliczy nowy czas
+          naświetlania.
+        </p>
+        <div class="calc-row">
+          <label>
+            Obecny czas (np. 1/125 albo 0.008)
+            <input type="text" id="ev-time-base" value="1/125" />
+          </label>
+          <label>
+            Zmiana EV (np. +2, -1)
+            <input type="number" id="ev-delta" value="1" step="0.5" />
+          </label>
+        </div>
+        <button type="button" id="ev-time-button" class="calc-button">
+          Przelicz
+        </button>
+        <div class="calc-result" id="ev-time-result">
+          Wpisz dane i kliknij „Przelicz”.
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section" id="tools-guides"></section>
+  </main>
+
+  <script src="tools.js"></script>
+</body>
+</html>
