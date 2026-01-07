@@ -109,6 +109,71 @@
   <script>
   console.log("INLINE SCRIPT WORKS");
 </script>
+<script>
+console.log("INLINE CHAT TEST LOADED");
+
+// MODAL SETUP
+(function setupModal() {
+  const modal = document.getElementById("assistantModal");
+  const openBtn = document.getElementById("openAssistantBtn");
+  const closeBtn = document.getElementById("closeAssistantBtn");
+
+  if (!modal || !openBtn || !closeBtn) return;
+
+  openBtn.onclick = () => modal.style.display = "block";
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+})();
+
+// CHAT LOGIC
+(function setupChat() {
+  const sendBtn = document.getElementById("assistantSend");
+  if (!sendBtn) return;
+
+  sendBtn.onclick = async () => {
+    const apiKey = document.getElementById("apiKeyInput").value.trim();
+    const input = document.getElementById("assistantInput").value.trim();
+    const output = document.querySelector(".assistant-output");
+
+    if (!apiKey) return alert("Please paste your OpenAI API Key");
+    if (!input) return;
+
+    const userMsg = document.createElement("div");
+    userMsg.className = "message user";
+    userMsg.textContent = input;
+    output.appendChild(userMsg);
+
+    try {
+      const res = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "user", content: input }]
+        })
+      });
+
+      const data = await res.json();
+      const reply = data.choices?.[0]?.message?.content || "No response";
+
+      const botMsg = document.createElement("div");
+      botMsg.className = "message assistant";
+      botMsg.textContent = reply;
+      output.appendChild(botMsg);
+    } catch (err) {
+      const errMsg = document.createElement("div");
+      errMsg.className = "message assistant";
+      errMsg.textContent = "Error: " + err.message;
+      output.appendChild(errMsg);
+    }
+  };
+})();
+</script>
 
 </body>
 </html>
